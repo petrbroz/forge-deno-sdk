@@ -1,6 +1,12 @@
 # forge-deno-sdk
 
+![.github/workflows/deno.yml](https://github.com/petrbroz/forge-deno-sdk/workflows/.github/workflows/deno.yml/badge.svg?branch=master)
+
 Experimental [Autodesk Forge](https://forge.autodesk.com) SDK for [Deno](https://deno.land) (v1.7.0).
+
+Available on https://deno.land:
+- Code: https://deno.land/x/forge@v0.1.0/mod.ts
+- Docs: https://doc.deno.land/https/deno.land/x/forge/mod.ts
 
 ## Prerequisites
 
@@ -14,7 +20,7 @@ Experimental [Autodesk Forge](https://forge.autodesk.com) SDK for [Deno](https:/
 ```typescript
 // app.ts
 
-import { AuthenticationClient } from "https://raw.githubusercontent.com/petrbroz/forge-deno-sdk/{VERSION}/mod.ts";
+import { AuthenticationClient } from "https://deno.land/x/forge@v0.1.0/mod.ts";
 
 const FORGE_CLIENT_ID = Deno.env.get("FORGE_CLIENT_ID");
 const FORGE_CLIENT_SECRET = Deno.env.get("FORGE_CLIENT_SECRET");
