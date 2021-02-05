@@ -7,4 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2021-02-05
+
 - Initial commit, for now only supports generating 2-legged OAuth tokens.
