@@ -1,6 +1,6 @@
 # forge-deno-sdk
 
-Experimental [Autodesk Forge](https://forge.autodesk.com) SDK for [Deno](https://deno.land) (v0.37).
+Experimental [Autodesk Forge](https://forge.autodesk.com) SDK for [Deno](https://deno.land) (v1.7.0).
 
 ## Usage
 
