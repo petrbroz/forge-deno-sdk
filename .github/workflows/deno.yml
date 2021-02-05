@@ -1,0 +1,35 @@
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        deno: [0.37.0]
+    name: Test with Deno ${{ matrix.deno }} 
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Setup Deno
+        uses: denolib/setup-deno@master
+        with:
+          deno-version: ${{ matrix.deno }}
+
+      - name: Setup Node
+        uses: actions/setup-node@master
+        with:
+          node-version: 12
+
+      - name: Print deno version
+        run: deno --version
+
+      - name: Check format
+        run: deno fmt --check **/*.ts
+
+      - name: Run tests
+        run: deno test --allow-env --allow-net
+        env:
+          FORGE_CLIENT_ID: ${{secrets.FORGE_CLIENT_ID}}
+          FORGE_CLIENT_SECRET: ${{secrets.FORGE_CLIENT_SECRET}}
