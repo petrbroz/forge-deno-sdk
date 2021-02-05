@@ -2,9 +2,18 @@
 
 Experimental [Autodesk Forge](https://forge.autodesk.com) SDK for [Deno](https://deno.land) (v1.7.0).
 
+## Prerequisites
+
+- [Deno runtime (v1.7.0)](https://deno.land/manual/getting_started/installation)
+- [Autodesk Forge app](https://forge.autodesk.com/en/docs/oauth/v2/tutorials/create-app)
+
 ## Usage
 
+- Import any classes you need from the _mod.ts_ file of a specific version of this module, for example:
+
 ```typescript
+// app.ts
+
 import { AuthenticationClient } from "https://raw.githubusercontent.com/petrbroz/forge-deno-sdk/{VERSION}/mod.ts";
 
 const FORGE_CLIENT_ID = Deno.env.get("FORGE_CLIENT_ID");
@@ -23,7 +32,21 @@ async function run() {
 run();
 ```
 
+- Set the following environment variables:
+    - `FORGE_CLIENT_ID` - your Forge application's client ID
+    - `FORGE_CLIENT_SECRET` - your Forge application's client secret
+- Run your app from the terminal, for example:
+
+```bash
+deno app.ts
+```
+
 ## Test
+
+- Set the following environment variables:
+    - `FORGE_CLIENT_ID` - your Forge application's client ID
+    - `FORGE_CLIENT_SECRET` - your Forge application's client secret
+- Run the following command in the terminal:
 
 ```bash
 deno test
