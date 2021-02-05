@@ -1,6 +1,1 @@
-export {
-  AuthenticationClient,
-  ITwoLeggedToken,
-  IThreeLeggedToken,
-  IUserProfile,
-} from "./authentication.ts";
+export { AuthenticationClient } from "./authentication.ts";
